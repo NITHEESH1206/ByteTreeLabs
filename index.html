@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ByteTree Labs — Senior product studio building SaaS, AI platforms and enterprise software." />
+  <title>ByteTree Labs — Engineering the Future, Byte by Byte</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient mesh background (covers entire page) -->
+  <div class="ambient">
+    <div class="ambient-blob ab-blue"></div>
+    <div class="ambient-blob ab-green"></div>
+    <div class="ambient-blob ab-blue-2"></div>
+    <div class="ambient-blob ab-green-2"></div>
+    <div class="ambient-grain"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Floating "Buy on Envato"-style chip (kept floating bottom-left like the reference). I changed copy. -->
+  <a href="#contact" class="float-chip" data-cursor="link">
+    <span class="chip-dot"></span>
+    <span>Available for new projects</span>
+  </a>
+
+  <!-- Floating scroll to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top" data-cursor="link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <ul class="nav-left">
+        <li><a href="#home" data-cursor="link">Home</a></li>
+        <li><a href="#services" data-cursor="link">Services</a></li>
+        <li><a href="#about" data-cursor="link">Results</a></li>
+      </ul>
+      <a href="#home" class="nav-logo" data-cursor="link">
+        <img src="assets/logo.png" alt="ByteTree Labs" />
+      </a>
+      <ul class="nav-right">
+        <li><a href="#process" data-cursor="link">Process</a></li>
+        <li><a href="#work" data-cursor="link">Work</a></li>
+        <li>
+          <a href="#contact" class="nav-cta" data-cursor="link">Get a Quote</a>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="eyebrow-wrap reveal-up">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-chip">
+            <span class="eyebrow-dot"></span>
+            <span>Built for Growth</span>
+          </span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <h1 class="hero-title reveal-up">
+          Engineering the future <br />
+          <span class="gradient-text">byte by byte.</span>
+        </h1>
+
+        <p class="hero-sub reveal-up">
+          One senior studio for high-conversion SaaS products, AI platforms and
+          enterprise software — built for serious engineering teams.
+        </p>
+
+        <div class="hero-cta reveal-up">
+          <a href="#contact" class="btn btn-dark magnetic" data-cursor="link">
+            <span>Start a Project</span>
+          </a>
+          <a href="#services" class="btn btn-glass magnetic" data-cursor="link">
+            <span>Explore Services</span>
+          </a>
+        </div>
+
+        <!-- App icon strip — represents service practices -->
+        <div class="app-strip reveal-up">
+          <div class="app-tile" title="SaaS Products">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="6" width="24" height="20" rx="3" stroke="url(#g1)" stroke-width="1.8"/>
+              <path d="M4 12h24" stroke="url(#g1)" stroke-width="1.8"/>
+              <circle cx="8" cy="9" r="0.8" fill="#5EE979"/>
+              <circle cx="11" cy="9" r="0.8" fill="#6B8BFF"/>
+              <path d="M9 18h14M9 21h10M9 24h6" stroke="#A8B3D9" stroke-width="1.4" stroke-linecap="round"/>
+              <defs><linearGradient id="g1" x1="0" x2="32" y1="0" y2="32"><stop stop-color="#6B8BFF"/><stop offset="1" stop-color="#5EE979"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="app-tile" title="AI Platforms">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="4" stroke="url(#g2)" stroke-width="1.8"/>
+              <circle cx="16" cy="16" r="9" stroke="url(#g2)" stroke-width="1.4" stroke-dasharray="2 2.5"/>
+              <circle cx="16" cy="16" r="13" stroke="url(#g2)" stroke-width="1" stroke-dasharray="1 3"/>
+              <circle cx="16" cy="6" r="1.4" fill="#5EE979"/>
+              <circle cx="26" cy="16" r="1.4" fill="#6B8BFF"/>
+              <defs><linearGradient id="g2" x1="0" x2="32" y1="0" y2="32"><stop stop-color="#6B8BFF"/><stop offset="1" stop-color="#5EE979"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="app-tile" title="Enterprise">
+            <svg viewBox="0 0 32 32" fill="none">
+              <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="url(#g3)" stroke-width="1.6"/>
+              <rect x="18" y="5" width="9" height="9" rx="1.5" stroke="url(#g3)" stroke-width="1.6"/>
+              <rect x="5" y="18" width="9" height="9" rx="1.5" stroke="url(#g3)" stroke-width="1.6"/>
+              <rect x="18" y="18" width="9" height="9" rx="1.5" stroke="url(#g3)" stroke-width="1.6"/>
+              <defs><linearGradient id="g3" x1="0" x2="32" y1="0" y2="32"><stop stop-color="#6B8BFF"/><stop offset="1" stop-color="#5EE979"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="app-tile big">
+            <img src="assets/logo.png" alt="ByteTree" class="tile-logo" />
+          </div>
+          <div class="app-tile" title="Product Engineering">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M5 26L13 14L19 20L27 8" stroke="url(#g4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="13" cy="14" r="2" fill="#5EE979"/>
+              <circle cx="27" cy="8" r="2" fill="#6B8BFF"/>
+              <defs><linearGradient id="g4" x1="0" x2="32" y1="0" y2="32"><stop stop-color="#6B8BFF"/><stop offset="1" stop-color="#5EE979"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="app-tile" title="Cloud">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M9 20c-2.5 0-5-2-5-5s2.5-5 5-5c.6-3 3-5 6.5-5s6 2 6.5 5c2.5 0 5 2 5 5s-2.5 5-5 5H9z" stroke="url(#g5)" stroke-width="1.6"/>
+              <defs><linearGradient id="g5" x1="0" x2="32" y1="0" y2="32"><stop stop-color="#6B8BFF"/><stop offset="1" stop-color="#5EE979"/></linearGradient></defs>
+            </svg>
+          </div>
+          <div class="app-tile" title="Digital Transformation">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M16 4v5M16 23v5M4 16h5M23 16h5M7 7l3.5 3.5M21.5 21.5L25 25M25 7l-3.5 3.5M7 25l3.5-3.5" stroke="url(#g6)" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="16" cy="16" r="4" stroke="url(#g6)" stroke-width="1.6"/>
+              <defs><linearGradient id="g6" x1="0" x2="32" y1="0" y2="32"><stop stop-color="#6B8BFF"/><stop offset="1" stop-color="#5EE979"/></linearGradient></defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES — stacked alternating feature cards -->
+    <section class="features" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow-wrap reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-chip"><span class="eyebrow-dot"></span><span>What we build</span></span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="section-title reveal-up">
+            Full-stack capabilities for <br /><span class="gradient-text">modern software teams.</span>
+          </h2>
+        </div>
+
+        <!-- Feature 1: SaaS -->
+        <article class="feature-card glass reveal-up">
+          <div class="feature-body">
+            <div class="mini-eyebrow"><span class="dot"></span>Discovery</div>
+            <h3>Find the right SaaS<br />in weeks, not quarters</h3>
+            <p>Multi-tenant platforms that scale gracefully from your first ten users to your first ten thousand. Billing, auth, analytics — the lot, shipped behind feature flags.</p>
+            <a href="#contact" class="btn btn-glass-sm magnetic" data-cursor="link">
+              <span>See SaaS work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="feature-visual visual-saas">
+            <div class="vis-grid"></div>
+            <div class="floating-icon fi-1">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect x="6" y="6" width="20" height="20" rx="4" fill="#0F1322"/>
+                <path d="M11 14h10M11 18h10M11 22h6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="floating-icon fi-2">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="4" width="24" height="24" rx="6" fill="#1F40E5"/>
+                <path d="M11 16l4 4 6-8" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="floating-icon fi-3">
+              <svg viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="4" width="24" height="24" rx="6" fill="#08C825"/>
+                <path d="M16 9v14M9 16h14" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- Feature 2: AI Platforms (reversed) -->
+        <article class="feature-card glass reverse reveal-up">
+          <div class="feature-body">
+            <div class="mini-eyebrow"><span class="dot"></span>Intelligence</div>
+            <h3>AI platforms that<br />actually ship.</h3>
+            <p>Production-grade LLM applications, RAG pipelines, fine-tuned models and AI agents wired into the systems your business actually runs on. No demoware.</p>
+            <a href="#contact" class="btn btn-glass-sm magnetic" data-cursor="link">
+              <span>See AI work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+          <div class="feature-visual visual-ai">
+            <div class="orbit-stage">
+              <div class="orbit orbit-1"></div>
+              <div class="orbit orbit-2"></div>
+              <div class="orbit orbit-3"></div>
+              <div class="core">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <path d="M16 6v20M6 16h20M9 9l14 14M23 9L9 23" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".9"/>
+                </svg>
+              </div>
+              <div class="node node-a"></div>
+              <div class="node node-b"></div>
+              <div class="node node-c"></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Feature 3+4 side by side -->
+        <div class="feature-pair">
+          <article class="feature-card glass small reveal-up">
+            <div class="mini-eyebrow"><span class="dot"></span>Enterprise</div>
+            <h3>Mission-critical<br />internal systems.</h3>
+            <p>ERP customisations, secure portals and integrations that connect every team in the org.</p>
+            <div class="chips">
+              <span>ERP</span><span>SSO</span><span>Integrations</span>
+            </div>
+          </article>
+          <article class="feature-card glass small reveal-up">
+            <div class="mini-eyebrow"><span class="dot"></span>Engineering</div>
+            <h3>Senior pods,<br />embedded with you.</h3>
+            <p>Design, product, web, mobile, QA and devops — shipping alongside your team, every sprint.</p>
+            <div class="chips">
+              <span>Pods</span><span>Mobile</span><span>QA</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Feature 5+6 -->
+        <div class="feature-pair">
+          <article class="feature-card glass small reveal-up">
+            <div class="mini-eyebrow"><span class="dot"></span>Cloud</div>
+            <h3>Cloud that<br />finance loves.</h3>
+            <p>AWS, Azure and GCP architectures that are fast, secure, observable — and stay inside budget.</p>
+            <div class="chips">
+              <span>AWS</span><span>Kubernetes</span><span>FinOps</span>
+            </div>
+          </article>
+          <article class="feature-card glass small reveal-up">
+            <div class="mini-eyebrow"><span class="dot"></span>Transformation</div>
+            <h3>Modernise without<br />breaking the floor.</h3>
+            <p>Migrate the parts of the business that still run on spreadsheets — without disrupting the parts that already make money.</p>
+            <div class="chips">
+              <span>Migration</span><span>Automation</span><span>Strategy</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BY THE NUMBERS -->
+    <section class="numbers" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow-wrap reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-chip"><span class="eyebrow-dot"></span><span>By the Numbers</span></span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="section-title reveal-up">
+            A studio built on <br /><span class="gradient-text">real results.</span>
+          </h2>
+          <p class="section-sub reveal-up">
+            We've shipped 120+ products with teams ranging from seed-stage founders to Fortune 500 platform groups. The numbers speak for themselves.
+          </p>
+        </div>
+
+        <div class="numbers-grid">
+          <div class="number-card glass reveal-up">
+            <div class="num-visual num-vis-stack">
+              <div class="stack-tile s1"><svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#1F40E5"/><path d="M8 14l3 3 5-7" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div class="stack-tile s2"><svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#08C825"/><path d="M12 6v12M6 12h12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+              <div class="stack-tile s3"><svg viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0F1322" stroke="rgba(255,255,255,0.12)"/><path d="M6 12h12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+              <div class="stack-stars">★★★★★</div>
+            </div>
+            <div class="num-value"><span class="counter" data-target="120">0</span>+</div>
+            <div class="num-label">Products shipped</div>
+            <div class="num-sub">From MVP to scaled enterprise platforms</div>
+          </div>
+
+          <div class="number-card glass reveal-up">
+            <div class="num-visual num-vis-arc">
+              <svg viewBox="0 0 200 120" fill="none" class="arc-svg">
+                <path d="M20 100 Q100 0 180 100" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="3 4"/>
+              </svg>
+              <div class="arc-icon arc-1"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#1F40E5"/></svg></div>
+              <div class="arc-icon arc-2 arc-center"><img src="assets/logo.png" alt=""/></div>
+              <div class="arc-icon arc-3"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#08C825"/></svg></div>
+            </div>
+            <div class="num-value"><span class="counter" data-target="45">0</span>M+</div>
+            <div class="num-label">End users reached</div>
+            <div class="num-sub">Across products in 14 countries</div>
+          </div>
+
+          <div class="number-card glass reveal-up">
+            <div class="num-visual num-vis-rows">
+              <div class="row-card r1">
+                <span class="row-avatar"></span>
+                <span class="row-text">Top-Rated Studio</span>
+                <span class="row-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7 7 .5-5 5 1.5 7-6.5-4-6.5 4L7 14.5l-5-5 7-.5z" fill="#5EE979"/></svg></span>
+              </div>
+              <div class="row-card r2">
+                <span class="row-avatar alt"></span>
+                <span class="row-text">Rising Partner</span>
+                <span class="row-badge"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#6B8BFF"/></svg></span>
+              </div>
+            </div>
+            <div class="num-value"><span class="counter" data-target="98">0</span>%</div>
+            <div class="num-label">Client retention</div>
+            <div class="num-sub">Five engagements average per client</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO with mega ghost wordmark -->
+    <section class="manifesto">
+      <div class="container manifesto-inner">
+        <div class="mega-ghost">ByteTree</div>
+        <div class="eyebrow-wrap reveal-up">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-chip"><span class="eyebrow-dot"></span><span>Less talk, more build</span></span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <p class="manifesto-text reveal-up">
+          The best software isn't hidden behind layers of marketing speak or buried
+          in endless feature lists that nobody actually reads. We strip away the
+          noise so you can see what truly matters, understand it quickly, and
+          ship without wasting weeks deciphering buzzwords or corporate jargon.
+        </p>
+        <a href="#contact" class="btn btn-dark btn-large magnetic reveal-up" data-cursor="link">
+          <span>Find Your Stack</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT MODELS — Product-card style -->
+    <section class="engagements" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow-wrap reveal-up">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-chip"><span class="eyebrow-dot"></span><span>Engagement Models</span></span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="section-title reveal-up">
+            Three ways to <br /><span class="gradient-text">work with us.</span>
+          </h2>
+        </div>
+
+        <div class="engagement-grid">
+          <article class="product-card glass reveal-up">
+            <div class="prod-head">
+              <h3>Discovery Sprint</h3>
+              <a href="#" class="prod-arrow magnetic" data-cursor="link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <p>Two-week paid sprint to align on problem, users and architectural risk.</p>
+            <div class="price-pill">From $12k — 2 weeks</div>
+          </article>
+          <article class="product-card glass reveal-up">
+            <div class="prod-head">
+              <h3>Embedded Pod</h3>
+              <a href="#" class="prod-arrow magnetic" data-cursor="link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <p>A senior cross-functional pod shipping alongside your in-house team.</p>
+            <div class="price-pill">From $45k — monthly</div>
+          </article>
+          <article class="product-card glass reveal-up">
+            <div class="prod-head">
+              <h3>Build & Hand-off</h3>
+              <a href="#" class="prod-arrow magnetic" data-cursor="link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <p>End-to-end product build with a clean documented hand-off to your team.</p>
+            <div class="price-pill">Fixed-price project</div>
+          </article>
+        </div>
+
+        <div class="view-all reveal-up">
+          <a href="#contact" class="btn btn-dark magnetic" data-cursor="link">
+            <span>View all engagements</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" id="work">
+      <div class="container testimonials-inner">
+        <div class="testimonials-left reveal-up">
+          <a href="#" class="trust-chip" data-cursor="link">
+            <span>See our 436 reviews on</span>
+            <span class="trust-name"><span class="trust-star">★</span> Trustpilot</span>
+          </a>
+          <h2 class="section-title">
+            Loved by ambitious teams. <br /><span class="gradient-text">Built for more.</span>
+          </h2>
+          <p>A curated set of testimonials from teams that have shipped real products with us — not paid mascots.</p>
+        </div>
+        <div class="testimonials-right">
+          <article class="quote-card glass reveal-up">
+            <div class="stars">★★★★★ <span class="rating">4.9/5</span></div>
+            <blockquote>"ByteTree Labs shipped what our internal team had been trying to ship for two years — in under six months. The senior bar is real."</blockquote>
+            <div class="quote-meta">
+              <div class="avatar">SR</div>
+              <div>
+                <div class="quote-name">Sarah Reyes</div>
+                <div class="quote-role">VP Engineering · Atlas Health</div>
+              </div>
+            </div>
+          </article>
+          <article class="quote-card glass reveal-up">
+            <div class="stars">★★★★★ <span class="rating">4.9/5</span></div>
+            <blockquote>"I've worked with half a dozen agencies over the past year — none combined performance, clarity and control like ByteTree. From AI to enterprise, it just works."</blockquote>
+            <div class="quote-meta">
+              <div class="avatar alt">DW</div>
+              <div>
+                <div class="quote-name">Daniel Wright</div>
+                <div class="quote-role">CTO · BlockSavvy</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <div class="eyebrow-wrap reveal-up">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-chip"><span class="eyebrow-dot"></span><span>Let's build</span></span>
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="cta-title reveal-up">
+          Let's build something <br /><span class="gradient-text">people actually use.</span>
+        </h2>
+        <p class="reveal-up">A 30-minute call. No slides. No sales. We'll either be useful — or honest about why we aren't a fit.</p>
+        <div class="cta-buttons reveal-up">
+          <a href="mailto:hello@bytetreelabs.com" class="btn btn-dark btn-large magnetic" data-cursor="link">
+            <span>hello@bytetreelabs.com</span>
+          </a>
+          <a href="#" class="btn btn-glass btn-large magnetic" data-cursor="link">
+            <span>Book a 30-min call</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/logo.png" alt="ByteTree Labs" class="footer-logo" />
+            <p>Engineering the future, byte by byte. A senior product studio building SaaS, AI and enterprise software.</p>
+            <div class="socials">
+              <a href="#" data-cursor="link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.8-3s-2.1 1.5-2.1 2.9v5.7H9.5V9h3.4v1.6h0c.5-.9 1.6-1.8 3.3-1.8 3.6 0 4.2 2.3 4.2 5.4v6.2zM5.6 7.4a2 2 0 11-.1-4 2 2 0 010 4zM7.3 20.4H3.8V9h3.5v11.4z"/></svg>
+              </a>
+              <a href="#" data-cursor="link" aria-label="X">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 3H22l-7.4 8.5L23.3 21h-6.9l-5.4-7-6.2 7H1.7l7.9-9L1 3h7.1l4.9 6.5L18.9 3zm-1.2 16h1.9L7.4 5H5.4l12.3 14z"/></svg>
+              </a>
+              
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#" data-cursor="link">SaaS Products</a></li>
+              <li><a href="#" data-cursor="link">AI Platforms</a></li>
+              <li><a href="#" data-cursor="link">Enterprise Software</a></li>
+              <li><a href="#" data-cursor="link">Product Engineering</a></li>
+              <li><a href="#" data-cursor="link">Cloud Services</a></li>
+              <li><a href="#" data-cursor="link">Digital Transformation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#" data-cursor="link">About</a></li>
+              <li><a href="#" data-cursor="link">Work</a></li>
+              <li><a href="#" data-cursor="link">Careers</a></li>
+              <li><a href="#" data-cursor="link">Blog</a></li>
+              <li><a href="#" data-cursor="link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4></h4>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2026 ByteTree Labs. All rights reserved.</div>
+          <div class="footer-legal">
+            <a href="#" data-cursor="link">Privacy</a>
+            <a href="#" data-cursor="link">Terms</a>
+            <a href="#" data-cursor="link">Security</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
